@@ -1,0 +1,20 @@
+{
+  "name": "cumple15brenda",
+  "version": "1.0.0",
+  "description": "Tarjeta invitación online a fiestas y eventos",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "tarea": "gulp tarea"
+  },
+  "keywords": [
+    "gulp",
+    "sass"
+  ],
+  "author": "Ariel P Bedini",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.61.0"
+  }
+}

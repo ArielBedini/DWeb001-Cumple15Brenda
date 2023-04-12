@@ -1,4 +1,26 @@
+@use 'base/variables' as v;
 
-h1 {
-    background-color: $color;
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: v.$cNegro;
+}
+
+// Funcionalidades
+.centrarTexto {
+    text-align: center;
+}
+
+.textoBlanco {
+    color: v.$cBlanco;
+}
+
+
+
+

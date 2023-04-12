@@ -1,7 +1,9 @@
-@import 'base/variables';
-@import 'contenido/contenido';
+//! *****  Sintaxis Anterior *****
+// @import 'base/variables';        
+// @import 'contenido/contenido';
 
-body {
-    background-color: $color;
-}
+//! *****  Nueva Sintáxis *****
+@use 'base' as v;
+@use 'contenido' as c;
+
 

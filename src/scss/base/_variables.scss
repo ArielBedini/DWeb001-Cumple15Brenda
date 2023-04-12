@@ -1,2 +1,16 @@
+// definimos las fuestas principales
+$fPrincipal: 'Monoton', cursive;
+$fSecundaria: 'Numans', sans-serif;
+@font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+  }
+  
+// Definimos plantilla de colores del documento
+$cBlanco: white;
+$cNegro: black;
+$cMagentaClaro: rgb(159, 82, 197);
+$cMagentaOscuro: rgb(123, 34, 131);
 
-$color: red;
+
+

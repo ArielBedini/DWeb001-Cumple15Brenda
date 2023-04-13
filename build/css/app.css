@@ -312,26 +312,22 @@ template {
   src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 h1 {
-  font-size: 6rem;
-  font-family: "Monoton", cursive;
-  text-transform: uppercase;
-  font-weight: 200;
-  margin: 0;
-  padding: 0;
-}
-
-h2, h3, h4, h5, h6 {
-  font-family: "Monoton", cursive;
+  font-family: "Clicker Script", cursive;
+  font-size: 12rem;
+  font-weight: 100;
 }
 
 h2 {
-  font-size: 4rem;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 3rem;
+  font-weight: 100;
 }
 
 h3 {
-  font-size: 3rem;
-  font-weight: normal;
-  text-transform: uppercase;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 1rem;
 }
 
 .flux {
@@ -389,6 +385,7 @@ html {
 }
 
 body {
+  min-height: 100vh;
   background-color: black;
 }
 
@@ -401,12 +398,12 @@ body {
 }
 
 .textoResaltado {
-  font-weight: 200;
+  font-weight: 700;
   color: #F40A35;
 }
 
 .fondoTitulos {
-  width: 50%;
+  width: min(95%, 60rem);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -415,18 +412,29 @@ body {
 }
 
 .titulos {
-  margin: 20rem auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 20rem;
   position: absolute;
 }
 
 .linea {
-  border-style: solid;
-  width: 60%;
-  border-width: 0.2rem;
-  border-color: #FB4264;
   margin: 0 auto;
+  border-style: solid;
+  border-radius: 25%;
+  width: 90%;
+  border-width: 0.3rem;
+  border-color: #FB4264;
 }
 
 .video {
   width: 100%;
+}
+
+.lugaryfecha {
+  position: unset;
+}
+
+p {
+  color: white;
 }

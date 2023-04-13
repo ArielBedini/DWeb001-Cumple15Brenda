@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    min-height: 100vh;
     background-color: v.$cNegro;
 }
 
@@ -22,10 +23,9 @@ body {
 }
 
 .textoResaltado {
-    font-weight: 200;
+    font-weight:700;
     color: v.$cRojoOscuro;
 }
-
 
 // Contenedor Principal
 .contenedor {
@@ -33,7 +33,7 @@ body {
 }
 
 .fondoTitulos {
-    width: 50%;
+    width: min(95%, 60rem);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -46,18 +46,29 @@ body {
 }
 
 .titulos {
-    margin: 20rem auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 20rem;
     position: absolute;
 }
 
 .linea {
-    border-style: solid;
-    width: 60%;
-    border-width: .2rem;
-    border-color: v.$cRojoClaro;
     margin: 0 auto;
+    border-style: solid;
+    border-radius: 25%;
+    width: 90%;
+    border-width: .3rem;
+    border-color: v.$cRojoClaro;
   }
 
   .video {
     width: 100%;
   }
+
+.lugaryfecha {
+    position:unset;
+}
+
+p {
+    color: v.$cBlanco;
+}

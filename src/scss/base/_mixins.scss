@@ -1,0 +1,10 @@
+@use 'variables' as v;
+
+@mixin titulo ($altura, $grosor, $mayusculas, $fuente: v.$fPrincipal) {
+    font-family: $fuente;
+    font-size: $altura;
+    font-weight: $grosor;   
+    @if $mayusculas {
+        text-transform: uppercase;
+    }
+}

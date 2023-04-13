@@ -13,7 +13,7 @@ body {
 }
 
 // Funcionalidades
-.centrarTexto {
+.textoCentrado {
     text-align: center;
 }
 
@@ -21,6 +21,43 @@ body {
     color: v.$cBlanco;
 }
 
+.textoResaltado {
+    font-weight: 200;
+    color: v.$cRojoOscuro;
+}
 
 
+// Contenedor Principal
+.contenedor {
 
+}
+
+.fondoTitulos {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    //background-image: url("/img/abstractwallpaper.jpeg");
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    position: relative;
+}
+
+.titulos {
+    margin: 20rem auto;
+    position: absolute;
+}
+
+.linea {
+    border-style: solid;
+    width: 60%;
+    border-width: .2rem;
+    border-color: v.$cRojoClaro;
+    margin: 0 auto;
+  }
+
+  .video {
+    width: 100%;
+  }

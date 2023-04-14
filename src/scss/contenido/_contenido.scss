@@ -1,4 +1,8 @@
+// Importamos variables y mixins utilizado el Snippet 'ivm'
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
 
 html {
     font-size: 62.5%;
@@ -9,7 +13,7 @@ html {
 }
 
 body {
-    min-height: 100vh;
+    //min-height: 100vh;
     background-color: v.$cNegro;
 }
 
@@ -27,30 +31,7 @@ body {
     color: v.$cRojoOscuro;
 }
 
-// Contenedor Principal
-.contenedor {
 
-}
-
-.fondoTitulos {
-    width: min(95%, 60rem);
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    //background-image: url("/img/abstractwallpaper.jpeg");
-    //background-repeat: no-repeat;
-    //background-size: cover;
-    position: relative;
-}
-
-.titulos {
-    width: 100%;
-    text-align: center;
-    margin-top: 20rem;
-    position: absolute;
-}
 
 .linea {
     margin: 0 auto;
@@ -61,12 +42,12 @@ body {
     border-color: v.$cRojoClaro;
   }
 
-  .video {
-    width: 100%;
-  }
 
 .lugaryfecha {
     position:unset;
+    @include m.tablet {
+        
+    }
 }
 
 p {

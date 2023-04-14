@@ -1,5 +1,7 @@
 @use 'variables' as v;
 
+
+// Formato a los titulos
 @mixin titulo ($altura, $grosor, $mayusculas, $fuente: v.$fPrincipal) {
     font-family: $fuente;
     font-size: $altura;
@@ -8,3 +10,24 @@
         text-transform: uppercase;
     }
 }
+
+// Preestablecer el uso de Media Queries usando la tecnica //!'Mobile First'
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {  // $monitor: 769px
+        @content;
+    }
+}
+
+@mixin monitor {
+    @media (min-width: v.$monitor) {  // $monitor: 1025px
+        @content;
+    }
+}
+
+@mixin monitorXL {
+    @media (min-width: v.$monitorXL) {  // $monitorXL: 2049px
+        @content;
+    }
+}
+

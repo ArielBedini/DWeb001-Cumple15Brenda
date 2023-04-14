@@ -1,13 +1,19 @@
+
 // definimos las fuestas principales
+
+
 $fPrincipal: 'Clicker Script', cursive;
+
 //$fPrincipal: 'Monoton', cursive;
 $fSecundaria: 'Fredericka the Great', cursive;
 @font-face {
     font-family: neon;
     src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
   }
+
   
 // Definimos plantilla de colores del documento
+
 $cBlanco: white;
 $cNegro: black;
 $cMagentaClaro: rgb(159, 82, 197);
@@ -16,4 +22,11 @@ $cRojoClaro:  #FB4264;
 $cRojoOscuro: #F40A35;
 
 
+// Definimos variables para diferentes configuraciones de tantalla con el límite 
+// de resolución inferior a partir del cual tomamos cada categoría de dispositivo, 
+// esta pensado para ser aplicado sobre la técnica //! Mobile Fisrt
+
+$tablet: 769px; 
+$monitor: 1025px;
+$monitorXL: 2049px;
 

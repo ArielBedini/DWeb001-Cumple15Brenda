@@ -3,7 +3,9 @@
 // @import 'contenido/contenido';
 
 //! *****  Nueva Sintáxis *****
-@use 'base' as v;
-@use 'contenido' as c;
+@use 'base';
+@use 'contenido';
+@use 'layout';
+
 
 

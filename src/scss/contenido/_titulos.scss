@@ -8,10 +8,10 @@ h1 {
 }
 
 h2 {
-  @include m.titulo(3rem, 100, false, v.$fSecundaria);
+  @include m.titulo(4rem, 100, false, v.$fSecundaria);
 }
 
 h3 {
-    @include m.titulo(4rem, bold, false, v.$fSecundaria);
+    @include m.titulo(3rem, bold, false, v.$fSecundaria);
     margin: 1rem ;
 }

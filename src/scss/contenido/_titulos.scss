@@ -4,14 +4,85 @@
 // titulo ($tamanio, $grosor, $mayusculas, $fuente: v.$fPrincipal) {
 
 h1 {
-  @include m.titulo(12rem, 100, false);
+  font-family: v.$fPrincipal;
+  font-size: 11rem;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
-  @include m.titulo(4rem, 100, false, v.$fSecundaria);
+  font-family: v.$fPrincipal;
+  font-size: 6rem;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
-    @include m.titulo(3rem, bold, false, v.$fSecundaria);
-    margin: 1rem ;
+  font-family: v.$fSecundaria;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 4rem 0 0 0;
+  padding: 0;
+    
 }
+
+.textoSombreado {
+  text-shadow: -1px -1px 0px v.$cSombreado,
+  2px 2px 0px v.$cSombreado,
+  4px 4px 0px #fd7b7b55;
+}
+
+h4 {
+  font-family: v.$fPrincipal;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+
+.titulos {
+
+  h1.tituloPrincipal {
+    margin: 1rem 0;
+    padding: 3rem 0;
+  }
+
+  h3.tituloSecundarioFecha {
+    margin: 0 0 5rem 0;
+    padding: 0;
+
+    span.fechaDia,
+    span.fechaAnio {
+      position: relative;
+    }
+
+    span.fechaDia::before,
+    span.fechaAnio::after {
+      content: '';
+      position: absolute;
+      width: 5rem;
+      height: 1px;
+      background-color: v.$cBlanco;
+      margin-top: 1.5rem;
+    }
+
+    span.fechaDia::before {
+      left: -6rem;
+    }
+
+    span.fechaAnio::after {
+      right: -6rem;
+    }
+  }
+
+  h2.tituloSecundarioMisQuince {
+    font-family: v.$fPrincipal;
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+

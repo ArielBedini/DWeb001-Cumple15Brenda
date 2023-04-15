@@ -6,11 +6,13 @@ $fPrincipal: 'Clicker Script', cursive;
 
 //$fPrincipal: 'Monoton', cursive;
 $fSecundaria: 'Fredericka the Great', cursive;
-@font-face {
+/* @font-face {
     font-family: neon;
     src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
-  }
+  } */
 
+  // fuentes de párrafos
+  $fParrafos: 'Montserrat', sans-serif;
   
 // Definimos plantilla de colores del documento
 
@@ -18,8 +20,11 @@ $cBlanco: white;
 $cNegro: black;
 $cMagentaClaro: rgb(159, 82, 197);
 $cMagentaOscuro: rgb(123, 34, 131);
+$cRosa:  #ee9baa;
 $cRojoClaro:  #FB4264;
 $cRojoOscuro: #F40A35;
+$cBackground: #2196f3;
+$cSombreado: rgba(51, 15, 15, 0.4);
 
 
 // Definimos variables para diferentes configuraciones de tantalla con el límite 

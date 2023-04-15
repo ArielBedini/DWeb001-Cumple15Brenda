@@ -307,27 +307,76 @@ template {
   display: none;
 }
 
-@font-face {
-  font-family: neon;
-  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
-}
+/* @font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+  } */
 h1 {
   font-family: "Clicker Script", cursive;
-  font-size: 12rem;
+  font-size: 11rem;
   font-weight: 100;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
-  font-family: "Fredericka the Great", cursive;
-  font-size: 4rem;
-  font-weight: 100;
+  font-family: "Clicker Script", cursive;
+  font-size: 6rem;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
   font-family: "Fredericka the Great", cursive;
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 1rem;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 4rem 0 0 0;
+  padding: 0;
+}
+
+.textoSombreado {
+  text-shadow: -1px -1px 0px rgba(51, 15, 15, 0.4), 2px 2px 0px rgba(51, 15, 15, 0.4), 4px 4px 0px rgba(253, 123, 123, 0.3333333333);
+}
+
+h4 {
+  font-family: "Clicker Script", cursive;
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.titulos h1.tituloPrincipal {
+  margin: 1rem 0;
+  padding: 3rem 0;
+}
+.titulos h3.tituloSecundarioFecha {
+  margin: 0 0 5rem 0;
+  padding: 0;
+}
+.titulos h3.tituloSecundarioFecha span.fechaDia,
+.titulos h3.tituloSecundarioFecha span.fechaAnio {
+  position: relative;
+}
+.titulos h3.tituloSecundarioFecha span.fechaDia::before,
+.titulos h3.tituloSecundarioFecha span.fechaAnio::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 1px;
+  background-color: white;
+  margin-top: 1.5rem;
+}
+.titulos h3.tituloSecundarioFecha span.fechaDia::before {
+  left: -6rem;
+}
+.titulos h3.tituloSecundarioFecha span.fechaAnio::after {
+  right: -6rem;
+}
+.titulos h2.tituloSecundarioMisQuince {
+  font-family: "Clicker Script", cursive;
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .flux {
@@ -378,14 +427,22 @@ h3 {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-snap-type: y mandatory;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   background-color: black;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
 }
 
 .textoCentrado {
@@ -397,56 +454,119 @@ body {
 }
 
 .textoResaltado {
-  font-weight: 700;
-  color: #F40A35;
+  font-weight: 8 0;
+  color: #FB4264;
+}
+
+.posicionarScrollIncial {
+  scroll-snap-align: end;
+  scroll-snap-stop: always;
+}
+
+.posicionarScroll {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.imagenFiesta {
+  background-image: url("/img/letsparty.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-bottom: 10rem;
+}
+.imagenFiesta .lugaryfecha .iconos {
+  width: 15rem;
+  margin-top: 25%;
+}
+
+.imagenCuerpo {
+  background-image: url("/img/abstractwallpaper.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  margin-top: 10rem;
+}
+.imagenCuerpo h2 {
+  margin: 8rem 0 0 0;
+}
+.imagenCuerpo .dresscode {
+  padding: 5% 0 0 0;
+}
+.imagenCuerpo .dresscode .iconos {
+  width: 10rem;
+}
+.imagenCuerpo .rsvp .iconos {
+  width: 10rem;
+}
+.imagenCuerpo .notas .iconos {
+  width: 10rem;
+}
+.imagenCuerpo .musica .iconos {
+  width: 10rem;
 }
 
 .linea {
   margin: 0 auto;
-  border-style: solid;
-  border-radius: 25%;
-  width: 90%;
-  border-width: 0.3rem;
-  border-color: #FB4264;
+  width: 80%;
+  height: 1px;
+  background-color: white;
+  margin-top: 1.5rem;
+}
+@media (min-width: 1025px) {
+  .linea {
+    width: 40%;
+  }
 }
 
-.lugaryfecha {
-  position: unset;
+a.botonEnlace {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  background-color: rgba(51, 15, 15, 0.4);
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 5rem;
+  border-color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #FB4264;
 }
-p {
+a.botonEnlace svg {
+  width: 2.2rem;
   color: white;
+  margin: 0 0 0 0.3rem;
 }
 
 .video {
   position: relative;
-  max-height: 70rem;
-  min-height: 40rem;
+  max-height: 100rem;
   overflow: hidden;
 }
 .video .overlay {
   position: absolute;
-  background: rgb(77, 28, 117);
-  background: linear-gradient(90deg, rgba(77, 28, 117, 0.2973564426) 0%, rgba(255, 255, 255, 0) 48%, rgba(255, 0, 0, 0.4) 100%);
   width: 100%;
-  height: 100%;
+  height: 90%;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (min-width: 1025px) {
+  .video .overlay {
+    height: 100%;
+  }
 }
 .video video {
   margin-top: -15rem;
   width: auto;
   display: block;
 }
-
-.titulos {
-  z-index: 0;
-}
-.titulos h1 {
-  margin: 1rem 0;
-  padding: 5rem 0;
-}
-.titulos h3 {
-  margin: 0;
-  padding: 0;
+@media (min-width: 1025px) {
+  .video video {
+    width: 100%;
+    height: auto;
+  }
 }

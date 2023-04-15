@@ -7,14 +7,24 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
     //min-height: 100vh;
     background-color: v.$cNegro;
+}
+
+
+p {
+    font-family: v.$fParrafos;
+    font-size: 2rem;
 }
 
 // Funcionalidades
@@ -27,29 +37,100 @@ body {
 }
 
 .textoResaltado {
-    font-weight:700;
-    color: v.$cRojoOscuro;
+    font-weight: 8 00;
+    color: v.$cRojoClaro;
+}
+.posicionarScrollIncial {
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
 }
 
+.posicionarScroll {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+
+.imagenFiesta {
+    background-image: url("/img/letsparty.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    .lugaryfecha .iconos {
+        width: 15rem;
+        margin-top: 25%;
+    }
+
+    padding-bottom: 10rem;
+}
+
+.imagenCuerpo {
+    background-image: url("/img/abstractwallpaper.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    margin-top: 10rem;
+
+    h2 {
+        margin: 8rem 0 0 0;
+    }
+
+    .dresscode {
+        padding: 5% 0 0 0;
+    }
+
+    .dresscode .iconos {
+        width: 10rem;
+    }
+
+    .rsvp .iconos {
+        width: 10rem;
+    }
+
+    .notas .iconos {
+        width: 10rem;
+    }
+
+    .musica .iconos {
+        width: 10rem;
+    }
+}
 
 
 .linea {
     margin: 0 auto;
-    border-style: solid;
-    border-radius: 25%;
-    width: 90%;
-    border-width: .3rem;
-    border-color: v.$cRojoClaro;
-  }
+    width: 80%;
+    height: 1px;
+    background-color: v.$cBlanco;
+    margin-top: 1.5rem;
 
+    @include m.monitor {
+        width: 40%;
 
-.lugaryfecha {
-    position:unset;
-    @include m.tablet {
-        
     }
 }
 
-p {
-    color: v.$cBlanco;
+a.botonEnlace {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    background-color: v.$cSombreado;
+    border-width: .2rem;
+    border-style: solid;
+    border-radius: 5rem;
+    border-color: v.$cBlanco;
+    padding: .5rem;
+    text-decoration: none;
+    font-family: v.$fParrafos;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: v.$cRojoClaro;
+
+    ::hover {}
+
+    svg {
+        width: 2.2rem;
+        color: v.$cBlanco;
+        margin: 0 0 0 .3rem;
+    }
 }

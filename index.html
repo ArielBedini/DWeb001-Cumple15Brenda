@@ -9,7 +9,7 @@
     <meta name="keywords" content="cumpleaños cumple15 cumpleaños15 Bren Brenda">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
@@ -19,65 +19,140 @@
 </head>
 
 <body>
-        <div class="video">
-            <div class="overlay">
-                <div class="titulos">
-                    <h3 class="tituloSecundario textoCentrado textoBlanco">
-                        <span class="textoResaltado">27</span> - May -
-                        <span class="textoResaltado">2023</span>
-                    </h3>
-                    <h1 class="tituloPrincipal textoCentrado textoBlanco neon">
-                        Brenda
-                    </h1>
-                    <h3 class="tituloSecundario textoCentrado textoBlanco">
-                        Mis <span class="textoResaltado">15</span>años
-                    </h3>
-                </div>
+    <div class="video posicionarScroll">
+        <div class="overlay">
+            <div class="titulos">
+                <h3 class="tituloSecundarioFecha textoCentrado textoBlanco">
+                    <span class="textoResaltado fechaDia">27</span> - May - <span
+                        class="textoResaltado fechaAnio">2023</span>
+                </h3>
+                <h1 class="tituloPrincipal textoCentrado textoBlanco neon">
+                    Brenda
+                </h1>
+                <h2 class="tituloSecundarioMisQuince textoCentrado textoBlanco">
+                    Mis <span class="textoResaltado">15</span> años
+                </h2>
+                <div class="linea"></div>
             </div>
-            <video autoplay muted loop>
-                <source src="vid/Particulas.mp4" type="video/mp4">
-                <source src="vid/Particulas.webm" type="video/webm">
-            </video>
         </div>
-<!--
-        <div class="lugaryfecha textoCentrado textoBlanco ">
-            <h2 class="lugarEnvento">Lugar</h2>
+        <video autoplay muted loop>
+            <source src="vid/Particulas.mov" type="video/mov">
+            <source src="vid/Particulas.mp4" type="video/mp4">
+            <source src="vid/Particulas.webm" type="video/webm">
+        </video>
+    </div>
 
-            <h2 class="fechaEnvento">Día</h2>
+    <div class="imagenFiesta posicionarScroll">
+        <div class="lugaryfecha textoCentrado textoBlanco">
+            <img class="iconos" src="img/icon-party.png">
+            <div class="linea"></div>
+            <h3 class="lugarEnvento textoSombreado">Dia y Horario</h3>
+            <p class=" textoBlanco">27 de mayo a las 31:30 hs</p>
+<!--             <a class="botonEnlace" href="#">Agendar
+                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z">
+                    </path>
+                </svg>
+            </a> -->
+            <a title="Agendar" class="botonEnlace addeventatc" data-id="Al16762124" href="https://www.addevent.com/event/Al16762124" target="_blank">Add to Calendar</a>
+            
+            <h3 class="fechaEnvento textoSombreado">Lugar</h3>
+            <p class=" textoBlanco">Salon de Eventos 938</p>
+<!--             <a class="botonEnlace" href="#">Confirmar Asistencia
+                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z">
+                    </path>
+                </svg>
+            </a> -->
+            <h3 class="fechaEnvento textoSombreado">Dirección</h3>
+            <p class=" textoBlanco">Belgrano 938, San Carlos Centro, Santa Fe</p>
+            <a class="botonEnlace"
+                href="https://www.google.com/maps/place/Salta+%26+Sarmiento,+San+Carlos+Centro,+Santa+Fe/@-31.7351436,-61.09677,18z/data=!4m11!1m3!11m2!2sC7OeN1RtQwjkpZbd6s45pF7ntcKqGQ!3e1!3m6!1s0x95b59d0a55c9c3ff:0x395f04e535ecbbd2!8m2!3d-31.7351118!4d-61.0963811!15sCgEqkgEMaW50ZXJzZWN0aW9u4AEA!16s%2Fg%2F11h9rw1c3s"
+                target="_Blanc">Cómo llegar
+                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
+                </svg>
+            </a>
         </div>
+    </div>
 
+    <div class="imagenCuerpo">
         <div class="dresscode textoCentrado textoBlanco ">
-            <h2 class="lugarEnvento">Dress Code</h2>
-
+            <h2 class="lugarEnvento textoSombreado textoCentrado neon">Dress Code</h2>
+            <img class="iconos" src="img/percha-retro.png">
+            <div class="linea"></div>
+            <p class=" textoBlanco posicionarScroll">Outfit informal</p>
+        </div>
+        
+        <div class="rsvp textoCentrado textoBlanco">
+            <h2 class="lugarEnvento textoSombreado textoCentrado neon">Rsvp</h2>
+            <img class="iconos" src="img/27-may.png">
+            <div class="linea"></div>
+            <a class="botonEnlace" href="#">Confirmar Asistencia
+                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z">
+                    </path>
+                </svg>
+            </a>
         </div>
 
-        <div class="Notas">
-            <h2 class="lugarEnvento">Notas</h2>
-
+        <div class="notas textoCentrado textoBlanco">
+            <h2 class="notasEnvento textoSombreado textoCentrado neon">Notas</h2>
+            <img class="iconos" src="img/notepad.png">
+            <div class="linea"></div>
+            <a class="botonEnlace" href="#">Notas
+                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z">
+                    </path>
+                </svg>
+            </a>
         </div>
 
-        <div class="rsvp">
 
+        <div class="musica textoCentrado textoBlanco">
+            <h2 class="notasEnvento textoSombreado textoCentrado neon posicionarScroll ">Musica</h2>
+            <img class="iconos" src="img/musical-notes.png">
+            <div class="linea"></div>
+            <a class="botonEnlace" href="#">Notas
+                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z">
+                    </path>
+                </svg>
+            </a>
         </div>
+    </div>
+    
+    <div class="instagramer">
 
-        <div class="instagramer">
+    </div>
 
-        </div>
 
-        <div class="music">
 
-        </div>
+    <div class="thegift">
 
-        <div class="thegift">
+    </div>
 
-        </div>
-    -->
 
     <footer>
         <p>todos los derenchos reservados</p>
     </footer>
 
     <!-- <script src="js/neon.js"></script> -->
+    <scrip src="js/modernizr.js"></scrip>
 </body>
 
 </html>
+

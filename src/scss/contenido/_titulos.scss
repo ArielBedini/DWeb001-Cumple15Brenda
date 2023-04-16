@@ -3,44 +3,6 @@
 
 // titulo ($tamanio, $grosor, $mayusculas, $fuente: v.$fPrincipal) {
 
-h1 {
-  font-family: v.$fPrincipal;
-  font-size: 11rem;
-  font-weight: 100;
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  font-family: v.$fPrincipal;
-  font-size: 6rem;
-  font-weight: 200;
-  margin: 0;
-  padding: 0;
-}
-
-h3 {
-  font-family: v.$fSecundaria;
-  font-size: 2.2rem;
-  font-weight: 500;
-  margin: 4rem 0 0 0;
-  padding: 0;
-    
-}
-
-.textoSombreado {
-  text-shadow: -1px -1px 0px v.$cSombreado,
-  2px 2px 0px v.$cSombreado,
-  4px 4px 0px #fd7b7b55;
-}
-
-h4 {
-  font-family: v.$fPrincipal;
-  font-size: 2.6rem;
-  font-weight: 500;
-}
-
-
 .titulos {
 
   h1.tituloPrincipal {
@@ -48,7 +10,7 @@ h4 {
     padding: 3rem 0;
   }
 
-  h3.tituloSecundarioFecha {
+  p.tituloSecundarioFecha {
     margin: 0 0 5rem 0;
     padding: 0;
 
@@ -76,7 +38,7 @@ h4 {
     }
   }
 
-  h2.tituloSecundarioMisQuince {
+  p.tituloSecundarioMisQuince {
     font-family: v.$fPrincipal;
     font-size: 5rem;
     margin: 0;

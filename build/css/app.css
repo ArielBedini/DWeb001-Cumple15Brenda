@@ -369,13 +369,11 @@ template {
   }
 }
 .neon-rojo {
-  line-height: 9vw;
   text-shadow: 0 0 3vw #F40A35;
   animation: neon-rojo 2s infinite alternate;
 }
 
 .neon-violeta {
-  line-height: 9vw;
   text-shadow: 0 0 3vw #F40A35;
   animation: neon-violeta 2s infinite alternate;
 }
@@ -428,11 +426,11 @@ h1 {
 }
 
 h2 {
-  font-family: "contorneada", sans serif, contorno;
-  font-size: 4rem;
-  font-weight: bold;
+  font-family: "Monoton", cursive;
+  font-size: 3rem;
+  font-weight: 200;
   margin: 0;
-  padding: 0;
+  padding: 4rem 0 0 0;
 }
 
 h3 {
@@ -464,26 +462,22 @@ h4 {
   margin-top: 25%;
 }
 
-.imagenCuerpo {
+.contenedorBloques {
   background-image: url("/img/abstractwallpaper.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: right;
 }
-.imagenCuerpo h2 {
-  margin: 8rem 0 0 0;
+.contenedorBloques .bloque {
+  height: fit-content;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18rem 0;
 }
-.imagenCuerpo .dresscode .iconos {
-  width: 10rem;
-}
-.imagenCuerpo .rsvp .iconos {
-  width: 10rem;
-}
-.imagenCuerpo .notas .iconos {
-  width: 10rem;
-}
-.imagenCuerpo .musica .iconos {
-  width: 10rem;
+.contenedorBloques .iconos {
+  width: 6rem;
 }
 
 .linea {
@@ -501,7 +495,7 @@ h4 {
 
 a.botonEnlace {
   display: block;
-  margin: 0 auto;
+  margin: 2rem auto;
   width: 60%;
   background-color: rgba(51, 15, 15, 0.4);
   border-width: 0.2rem;

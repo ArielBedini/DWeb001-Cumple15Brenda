@@ -35,36 +35,38 @@ h1 {
     font-weight: 100;
     margin: 0;
     padding: 0;
-  }
-  
-  h2 {
+}
+
+h2 {
     font-family: v.$fSecundaria;
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 3rem;
+    font-weight: 200;
     margin: 0;
-    padding: 0; 
-  }
-  
-  h3 {
+    padding: 4rem 0 0 0;
+
+    
+}
+
+h3 {
     font-family: v.$fParrafos;
     font-size: 2.2rem;
     font-weight: bold;
     margin: 4rem 0 0 0;
     padding: 0;
-  }
-  
-  h4 {
+}
+
+h4 {
     font-family: v.$fPrincipal;
     font-size: 2.6rem;
     font-weight: 500;
-  }
+}
 
-    
-  .textoSombreado {
+
+.textoSombreado {
     text-shadow: -1px -1px 0px v.$cSombreado,
-    2px 2px 0px v.$cSombreado,
-    4px 4px 0px #fd7b7b55;
-  }
+        2px 2px 0px v.$cSombreado,
+        4px 4px 0px #fd7b7b55;
+}
 
 .imagenFiesta {
     background-image: url("/img/letsparty.png");
@@ -79,36 +81,24 @@ h1 {
     padding-bottom: 10rem;
 }
 
-.imagenCuerpo {
+.contenedorBloques {
     background-image: url("/img/abstractwallpaper.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right;
     //background-size: 100%;
-    
 
-    h2 {
-        margin: 8rem 0 0 0;
+    .bloque {
+        height: fit-content;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 18rem 0;
     }
 
-    .dresscode {
-        //padding: 5% 0 0 0;
-    }
-
-    .dresscode .iconos {
-        width: 10rem;
-    }
-
-    .rsvp .iconos {
-        width: 10rem;
-    }
-
-    .notas .iconos {
-        width: 10rem;
-    }
-
-    .musica .iconos {
-        width: 10rem;
+    .iconos {
+        width: 6rem;
     }
 }
 
@@ -128,7 +118,7 @@ h1 {
 
 a.botonEnlace {
     display: block;
-    margin: 0 auto;
+    margin: 2rem auto;
     width: 60%;
     background-color: v.$cSombreado;
     border-width: .2rem;
@@ -142,7 +132,9 @@ a.botonEnlace {
     font-weight: 400;
     color: v.$cRojoClaro;
 
-    ::hover {}
+
+
+    :hover {}
 
     svg {
         width: 2.2rem;

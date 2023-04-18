@@ -1,7 +1,15 @@
-const {src, dest, watch, lastRun} = require("gulp");
+const {src, dest, watch, lastRun, parallel} = require("gulp");
+
+// dependencias para css
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
 
+//dependencias para imágenes
+const cache = require("gulp-cache");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+
+// funcion para compilar sass a css
 function css(done) {
     src("src/scss/app.scss")
         .pipe(plumber())
@@ -9,6 +17,31 @@ function css(done) {
         .pipe(dest("build/css"));    
     done();
 }
+
+// función para optimizar imagenes
+function imagenOptimizer(done) {
+    const opciones = {
+        optimizationLevel: 3
+    }
+    src("src/img/**/*.{png,jpg}")
+        .pipe(cache(imagemin(opciones)))
+        .pipe(dest("build/img"))
+
+    done();
+}
+
+// funciones para convertir imagenes a webp
+function conversorWebp(done) {
+    const opciones = {
+        quality: 50
+    }
+    src("src/img/**/*.{png,jpg}")
+        .pipe(webp(opciones))
+        .pipe(dest("build/img"))
+
+    done();
+}
+
 
 // función que esta escuchando cada cambio en lo arhcivos scss
 function dev(done) {
@@ -18,6 +51,8 @@ function dev(done) {
 }
 
 exports.css = css;
-exports.dev = dev;
+exports.imagenOptimizer = imagenOptimizer;
+exports.conversorWebp = conversorWebp;
+exports.dev = parallel(imagenOptimizer, conversorWebp, dev);
 
 

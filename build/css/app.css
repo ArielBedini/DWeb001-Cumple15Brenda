@@ -330,7 +330,7 @@ template {
   width: 5rem;
   height: 1px;
   background-color: white;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 .titulos p.tituloSecundarioFecha span.fechaDia::before {
   left: -6rem;
@@ -414,7 +414,12 @@ body {
 
 p {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+p:nth-child(1) {
+  padding-top: 1.8rem;
 }
 
 h1 {
@@ -427,7 +432,7 @@ h1 {
 
 h2 {
   font-family: "Monoton", cursive;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 200;
   margin: 0;
   padding: 4rem 0 0 0;
@@ -437,14 +442,18 @@ h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   font-weight: bold;
-  margin: 4rem 0 0 0;
-  padding: 0;
+  margin: 0;
+  padding: 3.5rem 0 1rem 0;
 }
 
 h4 {
   font-family: "Clicker Script", cursive;
   font-size: 2.6rem;
   font-weight: 500;
+}
+
+img {
+  max-width: 100;
 }
 
 .textoSombreado {
@@ -457,16 +466,36 @@ h4 {
   background-size: 100%;
   padding-bottom: 10rem;
 }
-.imagenFiesta .lugaryfecha .iconos {
-  width: 15rem;
-  margin-top: 25%;
+.imagenFiesta .iconos {
+  width: 6rem;
+  margin-top: 18%;
+}
+@media (min-width: 1025px) {
+  .imagenFiesta .iconos {
+    margin-top: 20%;
+  }
+}
+@media (min-width: 1025px) {
+  .imagenFiesta .lugaryfecha {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .contenedorBloques {
   background-image: url("/img/abstractwallpaper.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: right;
+  background-size: auto;
+}
+@media (min-width: 769px) {
+  .contenedorBloques {
+    background-size: cover;
+  }
 }
 .contenedorBloques .bloque {
   height: fit-content;
@@ -479,6 +508,9 @@ h4 {
 .contenedorBloques .iconos {
   width: 6rem;
 }
+.contenedorBloques .dresscode > p {
+  padding-top: 1.8rem;
+}
 
 .linea {
   margin: 0 auto;
@@ -487,16 +519,15 @@ h4 {
   background-color: white;
   margin-top: 1.5rem;
 }
-@media (min-width: 1025px) {
+@media (min-width: 769px) {
   .linea {
     width: 40%;
   }
 }
 
 a.botonEnlace {
-  display: block;
   margin: 2rem auto;
-  width: 60%;
+  width: 80%;
   background-color: rgba(51, 15, 15, 0.4);
   border-width: 0.2rem;
   border-style: solid;
@@ -505,13 +536,21 @@ a.botonEnlace {
   padding: 0.5rem;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: #FB4264;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 769px) {
+  a.botonEnlace {
+    width: 30rem;
+  }
 }
 a.botonEnlace svg {
   width: 2.2rem;
-  color: white;
+  color: #FB4264;
   margin: 0 0 0 0.3rem;
 }
 
@@ -528,14 +567,9 @@ a.botonEnlace svg {
   color: #FB4264;
 }
 
-.posicionarScroll {
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-}
-
 .video {
+  margin-top: -10rem;
   position: relative;
-  height: 100%;
   overflow: hidden;
 }
 .video .overlay {
@@ -545,4 +579,8 @@ a.botonEnlace svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.video video {
+  width: auto;
+  display: block;
 }

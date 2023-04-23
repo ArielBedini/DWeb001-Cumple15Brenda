@@ -8,6 +8,7 @@ const plumber = require("gulp-plumber");
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const avif = require("gulp-avif");
 
 // funcion para compilar sass a css
 function css(done) {
@@ -42,6 +43,18 @@ function conversorWebp(done) {
     done();
 }
 
+// funciones para convertir imagenes a webp
+function conversorAvif(done) {
+    const opciones = {
+        quality: 50
+    }
+    src("src/img/**/*.{png,jpg}")
+        .pipe(avif(opciones))
+        .pipe(dest("build/img"))
+
+    done();
+}
+
 
 // función que esta escuchando cada cambio en lo arhcivos scss
 function dev(done) {
@@ -53,6 +66,7 @@ function dev(done) {
 exports.css = css;
 exports.imagenOptimizer = imagenOptimizer;
 exports.conversorWebp = conversorWebp;
-exports.dev = parallel(imagenOptimizer, conversorWebp, dev);
+exports.conversorAvif = conversorAvif;
+exports.dev = parallel(imagenOptimizer, conversorWebp, conversorAvif, dev);
 
 

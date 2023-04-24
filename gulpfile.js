@@ -8,7 +8,7 @@ const plumber = require("gulp-plumber");
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const avif = require("gulp-avif");
+//const avif = require("gulp-avif");
 
 // funcion para compilar sass a css
 function css(done) {
@@ -67,6 +67,6 @@ exports.css = css;
 exports.imagenOptimizer = imagenOptimizer;
 exports.conversorWebp = conversorWebp;
 exports.conversorAvif = conversorAvif;
-exports.dev = parallel(imagenOptimizer, conversorWebp, conversorAvif, dev);
+exports.dev = parallel(imagenOptimizer, conversorWebp, dev);
 
 

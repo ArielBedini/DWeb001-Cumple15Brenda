@@ -39,7 +39,7 @@
                 <div class="linea"></div>
             </div>
         </div>
-        <video autoplay muted loop>
+        <video autoplay muted loop>  <!-- -->
             <source src="vid/Particulas.mp4" type="video/mp4">
             <source src="vid/Particulas.mov" type="video/mov">
             <source src="vid/Particulas.webm" type="video/webm">
@@ -47,7 +47,12 @@
     </div>
 
     <div class="imagenFiesta posicionarScroll">
-        <img class="iconos" src="build/img/icon-party.png">
+        <picture>
+            <source srcset="build/img/icon-party.avif" type="image/avif">
+            <source srcset="build/img/icon-party.webp" type="image/webp">
+            <!-- Fallback para soporte en navegadores ue no soportan avif o webp-->
+            <img class="iconos" width=200 height=300 loading="lazy" src="build/img/icon-party.png" alt="Bola de cristal">
+        </picture>
         <div class="linea"></div>
         
         <div class="lugaryfecha">
@@ -63,7 +68,6 @@
                 <h3 class="textoSombreado">Dirección</h3>
                 <p class="">Belgrano 938, San Carlos Centro, Santa Fe</p>
                 <a class="botonEnlace" href="https://goo.gl/maps/dTL9GRrMhQFmENCi6" target="_Blanc">Cómo llegar
-                    
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -80,7 +84,11 @@
         <div class="bloque posicionarScroll">
             <div class="costo">
                 <h2 class="costoEnvento">Costo <span class="neon-rojo">Tarjeta</span></h2>
-                <img class="iconos" src="build/img/costo.png">
+                <picture>
+                    <source srcset="build/img/costo.avif" type="image/avif">
+                    <source srcset="build/img/costo.webp" type="image/webp">
+                    <img class="iconos" width=200 height=300 loading="lazy" src="build/img/costo.png" alt="costo">
+                </picture>
                 <div class="linea"></div>
                 <!-- <a class="botonEnlace" href="#">Costo Tarjeta
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
@@ -98,8 +106,12 @@
             </div>
 
             <div class="rsvp">
-                <h2 class="lugarEnvento neon-rojo">Rsvp</h2>
-                <img class="iconos" src="build/img/27-may.png">
+                <h2 class="tarjetaEnvento neon-rojo">Rsvp</h2>
+                <picture>
+                    <source srcset="build/img/27-may.avif" type="image/avif">
+                    <source srcset="build/img/27-may.webp" type="image/webp">
+                    <img class="iconos" width=200 height=300 loading="lazy" src="build/img/27-may.png">
+                </picture>
                 <div class="linea"></div>
                 <a class="botonEnlace" href="#">Confirmar Asistencia
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
@@ -110,12 +122,47 @@
                     </svg>
                 </a>
             </div>
+
+
+            <div class="formularioRSVP">
+                <form class="sombra formulario" name="consulta" netlify method="POST">
+                    <fieldset>
+                        <Legend>Espero contar con tu prescencia:</legend>
+                        <div class="contenedorCampos">
+                            <div class="campo">
+                                <label>Nombre</label>
+                                <input type="text" placeholder="Nombre Completo" name="nombre" id="nombre" required/>
+                            </div>
+                            <div class="campo">
+                                <label>Teléfono</label>
+                                <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" />
+                            </div>
+                            <div class="campo">
+                                <label>Correo electrónico</label>
+                                <input type="email" placeholder="E-mail" name="correo" id="correo" required/>
+                            </div>
+                            <div class="campo">
+                                <label>Mensaje</label>
+                                <textarea placeholder="Mensaje" name="mensaje" id="mensaje" required></textarea>
+                            </div>
+                        </div>
+                        <div class="flex alinearDerecha">
+                            <input class="boton anchoTotal" type="submit" value="Enviar" name="btnEnviar" />
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
         </div>
 
         <div class="bloque posicionarScroll">
             <div class="dresscode ">
                 <h2 class="lugarEnvento">Dress <span class="neon-rojo">Code</span></h2>
-                <img class="iconos" src="build/img/percha-retro.png">
+                <picture>
+                    <source srcset="build/img/percha-retro.avif" type="image/avif">
+                    <source srcset="build/img/percha-retro.webp" type="image/webp">
+                    <img class="iconos" loading="lazy" width="200" height="300" rc="build/img/percha-retro.png" alt="Dress">
+                </picture>
                 <div class="linea"></div>
                 <p>Outfit informal</p>
             </div>
@@ -124,7 +171,11 @@
         <div class="bloque posicionarScroll">
             <div class="notas">
                 <h2 class="notasEnvento textoSombreado neon-violeta">Notas</h2>
-                <img class="iconos" src="build/img/notepad.png">
+                <picture>
+                    <source srcset="build/img/notepad.avif" type="image/avif">
+                    <source srcset="build/img/notepad.webp" type="image/webp">
+                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/notepad.png" alt="Notas">
+                </picture>
                 <div class="linea"></div>
                 <a class="botonEnlace" href="#">Notas
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -136,13 +187,46 @@
 
             <div class="musica">
                 <h2 class="notasEnvento textoSombreado neon-violeta">Musica</h2>
-                <img class="iconos" src="build/img/musical-notes.png">
+                <picture>
+                    <source srcset="build/img/musical-notes.avif" type="image/avif">
+                    <source srcset="build/img/musical-notes.webp" type="image/webp">
+                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/musical-notes.png" alt="Musica">
+                </picture>
                 <div class="linea"></div>
                 <a class="botonEnlace" href="#">Musica
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"></path>
                       </svg>
                 </a>
+
+                <div class="formularioMusica">
+                    <form class="sombra formulario" name="consulta" netlify method="POST">
+                        <fieldset>
+                            <Legend>Contame que te gustarái escuchar... </legend>
+                            <div class="contenedorCampos">
+                                <div class="campo">
+                                    <label>Nombre</label>
+                                    <input type="text" placeholder="Nombre Completo" name="nombre" id="nombre" required/>
+                                </div>
+                                <div class="campo">
+                                    <label>Teléfono</label>
+                                    <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" />
+                                </div>
+                                <div class="campo">
+                                    <label>Correo electrónico</label>
+                                    <input type="email" placeholder="E-mail" name="correo" id="correo" required/>
+                                </div>
+                                <div class="campo">
+                                    <label>Mensaje</label>
+                                    <textarea placeholder="Mensaje" name="mensaje" id="mensaje" required></textarea>
+                                </div>
+                            </div>
+                            <div class="flex alinearDerecha">
+                                <input class="boton anchoTotal" type="submit" value="Enviar" name="btnEnviar" />
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -162,8 +246,8 @@
         <p>todos los derenchos reservados</p>
     </footer>
 
-    <script src="js/modernizr.js"></script>
-    <script src="js/fullpage.js"></script>
+    <script src="build/js/modernizr.js"></script>
+    <script src="build/js/fullpage.js"></script>
 </body>
 
 </html>

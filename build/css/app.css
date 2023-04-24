@@ -412,7 +412,7 @@ body {
   color: white;
 }
 
-p {
+p, form {
   font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
   margin: 0;
@@ -453,15 +453,24 @@ h4 {
 }
 
 img {
-  max-width: 100;
+  width: 100%;
+  height: auto;
 }
 
 .textoSombreado {
   text-shadow: -1px -1px 0px rgba(51, 15, 15, 0.4), 2px 2px 0px rgba(51, 15, 15, 0.4), 4px 4px 0px rgba(253, 123, 123, 0.3333333333);
 }
 
+/** Header **/
+.webp .imagenFiesta {
+  background-image: url("../img/letsparty.webp");
+}
+
+.no-webp .imagenFiesta {
+  background-image: url("../img/letsparty.png");
+}
+
 .imagenFiesta {
-  background-image: url("/img/letsparty.png");
   background-repeat: no-repeat;
   background-size: 100%;
   padding-bottom: 10rem;
@@ -486,8 +495,15 @@ img {
   }
 }
 
+.webp .contenedorBloques {
+  background-image: url("../img/abstractwallpaper.webp");
+}
+
+.no-webp .contenedorBloques {
+  background-image: url("../img/abstractwallpaper.jpeg");
+}
+
 .contenedorBloques {
-  background-image: url("/img/abstractwallpaper.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto;

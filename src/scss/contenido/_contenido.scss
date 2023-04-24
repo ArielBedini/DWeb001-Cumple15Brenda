@@ -24,7 +24,7 @@ body {
 }
 
 
-p {
+p, form {
     font-family: v.$fParrafos;
     font-size: 1.8rem;
     margin: 0;
@@ -65,8 +65,10 @@ h4 {
 }
 
 img {
-    max-width: 100;
-    //display: block;
+    //max-width: 100;
+    // Establecemos un ancho de 100% y una alto automatico para evitar el ancho de 200 y alto de 300 prestablecido en las etiquetas <img>
+    width: 100%;
+    height: auto;
 }
 
 .textoSombreado {
@@ -75,8 +77,15 @@ img {
         4px 4px 0px #fd7b7b55;
 }
 
+/** Header **/
+.webp .imagenFiesta {
+    background-image: url("../img/letsparty.webp");
+}
+.no-webp .imagenFiesta {
+    background-image: url("../img/letsparty.png");
+}
+
 .imagenFiesta {
-    background-image: url("/img/letsparty.png");
     background-repeat: no-repeat;
     background-size: 100%;
     padding-bottom: 10rem;
@@ -106,8 +115,14 @@ img {
     }
 }
 
+.webp .contenedorBloques {
+    background-image: url("../img/abstractwallpaper.webp");
+}
+.no-webp .contenedorBloques {
+    background-image: url("../img/abstractwallpaper.jpeg");
+}
+
 .contenedorBloques {
-    background-image: url("/img/abstractwallpaper.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto;

@@ -56,17 +56,27 @@ function conversorAvif(done) {
 }
 
 
+// funcion para llevar todo nuestro codigo javacript a nuestro deployment en la carpeta 'build'
+function javascript(done) {
+    src("src/js/**/*.js")
+        .pipe(dest("build/js"));
+    
+    done();
+}
+
 // función que esta escuchando cada cambio en lo arhcivos scss
 function dev(done) {
     watch("src/scss/**/*.scss", css);
+    watch("src/js/**/*.js", javascript);
 
     done();
 }
 
 exports.css = css;
+exports.javascript = javascript;
 exports.imagenOptimizer = imagenOptimizer;
 exports.conversorWebp = conversorWebp;
 exports.conversorAvif = conversorAvif;
-exports.dev = parallel(imagenOptimizer, conversorWebp, dev);
+exports.dev = parallel(imagenOptimizer, conversorWebp, javascript, dev);
 
 

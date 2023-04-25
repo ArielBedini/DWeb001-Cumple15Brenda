@@ -67,10 +67,10 @@
 
   @keyframes neon-violeta {
     0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
-      text-shadow: 9px 9px 18px #8234ff, 
-             3px 3px 5px #32006c, 
-             -3px -3px 5px #32006c, 
-             -9px -9px 27px #8234ff;
+      text-shadow: 9px 9px 18px v.$cVioletaClaro,
+             3px 3px 5px v.$cVioletaOscuro, 
+             -3px -3px 5px v.$cVioletaOscuro, 
+             -9px -9px 27px v.$cVioletaClaro;
     }
   
     10%, 15%, 60% {

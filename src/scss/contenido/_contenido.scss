@@ -162,7 +162,7 @@ img {
     }
 }
 
-a.botonEnlace {
+.botonEnlace {
     margin: 2rem auto;
     width: 80%;
     background-color: v.$cSombreado;
@@ -179,6 +179,7 @@ a.botonEnlace {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     @include m.tablet {
         width: 30rem;
@@ -188,6 +189,10 @@ a.botonEnlace {
         width: 2.2rem;
         color: v.$cRojoClaro;
         margin: 0 0 0 .3rem;
+    }
+
+    :hover {
+        cursor: pointer;
     }
 }
 

@@ -388,7 +388,7 @@ template {
 }
 @keyframes neon-violeta {
   0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
-    text-shadow: 9px 9px 18px #8234ff, 3px 3px 5px #32006c, -3px -3px 5px #32006c, -9px -9px 27px #8234ff;
+    text-shadow: 9px 9px 18px rgb(130, 52, 255), 3px 3px 5px rgb(50, 0, 108), -3px -3px 5px rgb(50, 0, 108), -9px -9px 27px rgb(130, 52, 255);
   }
   10%, 15%, 60% {
     text-shadow: none;
@@ -541,7 +541,7 @@ img {
   }
 }
 
-a.botonEnlace {
+.botonEnlace {
   margin: 2rem auto;
   width: 80%;
   background-color: rgba(51, 15, 15, 0.4);
@@ -558,16 +558,20 @@ a.botonEnlace {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 @media (min-width: 769px) {
-  a.botonEnlace {
+  .botonEnlace {
     width: 30rem;
   }
 }
-a.botonEnlace svg {
+.botonEnlace svg {
   width: 2.2rem;
   color: #FB4264;
   margin: 0 0 0 0.3rem;
+}
+.botonEnlace :hover {
+  cursor: pointer;
 }
 
 .textoCentrado {
@@ -581,6 +585,67 @@ a.botonEnlace svg {
 .textoResaltado {
   font-weight: 800;
   color: #FB4264;
+}
+
+.contenedorFormulario {
+  width: 90%;
+  margin: 6rem auto;
+}
+@media (min-width: 769px) {
+  .contenedorFormulario {
+    width: 70rem;
+  }
+}
+.contenedorFormulario .formulario {
+  border-radius: 10rem;
+  width: 100%;
+}
+.contenedorFormulario .formulario fieldset {
+  border-radius: 6rem;
+  border-color: #ee9baa;
+}
+
+.contenedorCampos .campo {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  column-gap: 1rem;
+}
+@media (min-width: 769px) {
+  .contenedorCampos .campo {
+    flex-direction: row;
+  }
+}
+.contenedorCampos .campo label {
+  margin-top: 1rem;
+  text-align: right;
+  color: white;
+}
+@media (min-width: 769px) {
+  .contenedorCampos .campo label {
+    width: 18rem;
+    text-align: right;
+    margin-top: 2.2rem;
+  }
+}
+.contenedorCampos .campo input, .contenedorCampos .campo textarea {
+  width: 100%;
+  background-color: rgba(18, 1, 36, 0.6);
+  border-style: solid;
+  border-radius: 0.5rem;
+  color: white;
+}
+@media (min-width: 769px) {
+  .contenedorCampos .campo input, .contenedorCampos .campo textarea {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+.contenedorCampos .campo textarea {
+  height: 10rem;
 }
 
 .video {

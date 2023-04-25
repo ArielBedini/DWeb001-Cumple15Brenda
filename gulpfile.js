@@ -3,18 +3,26 @@ const {src, dest, watch, lastRun, parallel} = require("gulp");
 // dependencias para css
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const postcss = require("gulp-postcss");
+const sourcemaps = require("gulp-sourcemaps");
+
 
 //dependencias para imágenes
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-//const avif = require("gulp-avif");
+const avif = require("gulp-avif");
 
 // funcion para compilar sass a css
 function css(done) {
     src("src/scss/app.scss")
+        .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass())
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(sourcemaps.write("."))
         .pipe(dest("build/css"));    
     done();
 }
@@ -77,6 +85,7 @@ exports.javascript = javascript;
 exports.imagenOptimizer = imagenOptimizer;
 exports.conversorWebp = conversorWebp;
 exports.conversorAvif = conversorAvif;
-exports.dev = parallel(imagenOptimizer, conversorWebp, javascript, dev);
+//exports.dev = parallel(imagenOptimizer, conversorWebp, javascript, dev);
+exports.dev = parallel(imagenOptimizer, conversorWebp, conversorAvif, javascript, dev);
 
 

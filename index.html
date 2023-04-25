@@ -51,7 +51,7 @@
             <source srcset="build/img/icon-party.avif" type="image/avif">
             <source srcset="build/img/icon-party.webp" type="image/webp">
             <!-- Fallback para soporte en navegadores ue no soportan avif o webp-->
-            <img class="iconos" width=200 height=300 loading="lazy" src="build/img/icon-party.png"
+            <img class="iconos" loading="lazy" width="200" height="300"  src="build/img/icon-party.png"
                 alt="Bola de cristal">
         </picture>
         <div class="linea"></div>
@@ -89,7 +89,7 @@
                 <picture>
                     <source srcset="build/img/costo.avif" type="image/avif">
                     <source srcset="build/img/costo.webp" type="image/webp">
-                    <img class="iconos" width=200 height=300 loading="lazy" src="build/img/costo.png" alt="costo">
+                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/costo.png" alt="costo">
                 </picture>
                 <div class="linea"></div>
                 <!-- <a class="botonEnlace" href="#">Costo Tarjeta
@@ -102,8 +102,7 @@
                 </a> -->
                 <div class="leyendaBloque">
                     <p>Mayores: $ 7.500</p>
-                    <p>Manores de 16 años: $ 4.500</p>
-                    <p>Manores de 5 años: $ 2.500</p>
+                    <p>Manores de 10 años: $ 3.300</p>
                 </div>
             </div>
 
@@ -112,13 +111,13 @@
                 <picture>
                     <source srcset="build/img/27-may.avif" type="image/avif">
                     <source srcset="build/img/27-may.webp" type="image/webp">
-                    <img class="iconos" width=200 height=300 loading="lazy" src="build/img/27-may.png">
+                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/27-may.png">
                 </picture>
                 <div class="linea"></div>
                 <div class="leyendaBloque">
-                    <p>Confirmanos tu asistencia antes del <span class="textoResaltado">17</span> de Mayo</p>
+                    <p>Confirmanos tu asistencia antes del <span class="textoResaltado">19</span> de Mayo</p>
                 </div>
-                <a class="botonEnlace botonEnlace-rsvp" onclick="formularioRSVP(true)">Confirmar Asistencia
+                <a class="botonEnlace botonEnlace-rsvp" onclick="contenedorFormularioRSVP(true)">Confirmar Asistencia
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -129,27 +128,28 @@
             </div>
 
 
-            <div class="contenedorFormulario formularioRSVP" style="display: none">
-                <form class="formulario" name="consulta" netlify method="POST">
+            <div class="contenedorFormulario contenedorFormularioRSVP" style="display: none">
+                <form class="formulario FormularioRSVP" name="rsvp" method="POST" data-netlify="true">
                     <fieldset >
                         <Legend class="neon-rojo"><span class="textoResaltado">" </span>Espero contar con tu presencia:<span class="textoResaltado"> "</span></legend>
                         <div class="contenedorCampos">
                             <div class="campo">
-                                <label>Apellido:</label>
+                                <label for="apellido">Apellido:</label>
                                 <input type="text" placeholder="Ingresá tu Apellido" name="apellido" id="apellido" required />
                             </div>
                             <div class="campo">
-                                <label>Nombre:</label>
+                                <label for="nombre">Nombre:</label>
                                 <input type="text" placeholder="Ingresá tu Nombre" name="nombre" id="nombre" required />
                             </div>
                             <div class="campo">
-                                <label>E-mail:</label>
-                                <input type="email" placeholder="ngresá tu dirección de e-mail" name="correo" id="correo"/>
+                                <label for="email">E-mail:</label>
+                                <input type="email" placeholder="ngresá tu dirección de e-mail" name="email" id="email" required/>
                             </div>
                         </div>
+                        <div data-netlify-recaptcha="true"></div>
                         <div class="flex alinearDerecha">
                             <input class="botonEnlace" type="submit" value="Enviar" name="btnEnviar" />
-                            <input class="botonEnlace" value="Cancelar" name="btnCancelar" onclick="formularioRSVP(false)"/>
+                            <input class="botonEnlace" value="Cancelar" name="btnCancelar" onclick="contenedorFormularioRSVP(false)"/>
                         </div>
                     </fieldset>
                 </form>
@@ -163,7 +163,7 @@
                 <picture>
                     <source srcset="build/img/percha-retro.avif" type="image/avif">
                     <source srcset="build/img/percha-retro.webp" type="image/webp">
-                    <img class="iconos" loading="lazy" width="200" height="300" rc="build/img/percha-retro.png"
+                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/percha-retro.png"
                         alt="Dress">
                 </picture>
                 <div class="linea"></div>
@@ -172,7 +172,7 @@
         </div>
 
         <div class="bloque posicionarScroll">
-            <div class="notas">
+            <div class="nota">
                 <h2 class="notasEnvento textoSombreado neon-violeta">Notas</h2>
                 <picture>
                     <source srcset="build/img/notepad.avif" type="image/avif">
@@ -180,7 +180,7 @@
                     <img class="iconos" loading="lazy" width="200" height="300" src="build/img/notepad.png" alt="Notas">
                 </picture>
                 <div class="linea"></div>
-                <a class="botonEnlace" href="#"">Notas
+                <a class="botonEnlace" onclick="mostrarNota()">Notas
                     <svg fill=" none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -189,7 +189,6 @@
                     </svg>
                 </a>
             </div>
-
 
             <div class="musica">
                 <h2 class="notasEnvento textoSombreado neon-violeta">Musica</h2>
@@ -200,7 +199,7 @@
                         alt="Musica">
                 </picture>
                 <div class="linea"></div>
-                <a class="botonEnlace botonEnlace-musica" onclick="formularioMusica(true)">Musica
+                <a class="botonEnlace botonEnlace-musica" onclick="contenedorFormularioMusica(true)">Musica
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -209,24 +208,25 @@
                     </svg>
                 </a>
 
-                <div class="contenedorFormulario formularioMusica" style="display: none">
-                    <form class="sombra formulario" name="consulta" netlify method="POST">
+                <div class="contenedorFormulario contenedorFormularioMusica" style="display: none">
+                    <form class="formulario formularioMusica" name="musica" method="POST" data-netlify="true">
                         <fieldset>
                             <Legend class="neon-violeta">Qué música te gustaría que suene la noche del <span class="textoResaltado">27-05</span> ?... </legend>
                             <div class="contenedorCampos">
                                 <div class="campo">
-                                    <label>Nombre:</label>
-                                    <input type="text" placeholder="Ingresa tu Nombre Completo" name="nombre" id="nombre" required />
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" placeholder="Ingresa tu Nombre Completo" name="nombreCompleto" id="nombreCompleto" />
                                 </div>
                                 <div class="campo">
-                                    <label>Tema, Intérprete:</label>
+                                    <label for="temasmusicales">Tema, Intérprete:</label>
                                     <textarea placeholder="Ingresa el Nombre de la Canción y su Intérprete" name="temasmusicales"
                                         id="temasmusicales" required></textarea>
                                 </div>
                             </div>
+                            <div data-netlify-recaptcha="true"></div>
                             <div class="contenedor-boton">
-                                <input class="botonEnlace" type="submit" value="Enviar" name="btnEnviar" onclick="formularioMusica(false)"/>
-                                <input class="botonEnlace" value="Cancelar" name="btnCancelar" onclick="formularioMusica(false)"/>
+                                <input class="botonEnlace" type="submit" value="Enviar" name="btnEnviar"/>
+                                <input class="botonEnlace" value="Cancelar" name="btnCancelar" onclick="contenedorFormularioMusica(false)"/>
                             </div>
                         </fieldset>
                     </form>
@@ -246,8 +246,8 @@
     </div>
 
 
-    <footer>
-        <p>todos los derenchos reservados</p>
+    <footer class="pie">
+        <p><span>placefil.ar</span> - Todos los derenchos reservados</p>
     </footer>
     <script src="build/js/app.js"></script>
     <script src="build/js/modernizr.js"></script>

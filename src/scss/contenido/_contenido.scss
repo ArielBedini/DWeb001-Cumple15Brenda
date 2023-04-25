@@ -21,6 +21,10 @@ body {
     background-color: v.$cNegro;
     text-align: center;
     color: v.$cBlanco;
+
+    &.fijarBody {
+        overflow: hidden;
+    }
 }
 
 
@@ -65,7 +69,6 @@ h4 {
 }
 
 img {
-    //max-width: 100;
     // Establecemos un ancho de 100% y una alto automatico para evitar el ancho de 200 y alto de 300 prestablecido en las etiquetas <img>
     width: 100%;
     height: auto;
@@ -89,10 +92,6 @@ img {
     background-repeat: no-repeat;
     background-size: 100%;
     padding-bottom: 10rem;
-    // @include m.tablet {
-    //     width: 80%;
-    //     margin: 0 auto;
-    // }
 
     .iconos {
         width: 6rem;
@@ -191,7 +190,7 @@ img {
         margin: 0 0 0 .3rem;
     }
 
-    :hover {
+    &:hover {
         cursor: pointer;
     }
 }
@@ -209,6 +208,47 @@ img {
     font-weight: 800;
     color: v.$cRojoClaro;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+    background-color: rgb(0 0 0 / .5);
+    
+    picture {
+        display: block;
+        max-width: 80%;
+        @include m.tablet {
+            max-width: 40rem;
+        }
+        @include m.monitor {
+            max-width: 60rem;
+        }
+    }
+}
+
+.botonOverlay {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$cBlanco;
+    color: v.$cNegro;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 
 .posicionarScroll {
 //     scroll-snap-align: center;

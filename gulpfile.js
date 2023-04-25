@@ -13,7 +13,10 @@ const sourcemaps = require("gulp-sourcemaps");
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const avif = require("gulp-avif");
+//const avif = require("gulp-avif");
+
+//dependencias para JAvascript
+const terser = require("gulp-terser-js");
 
 // funcion para compilar sass a css
 function css(done) {
@@ -67,6 +70,7 @@ function conversorAvif(done) {
 // funcion para llevar todo nuestro codigo javacript a nuestro deployment en la carpeta 'build'
 function javascript(done) {
     src("src/js/**/*.js")
+        .pipe(terser())
         .pipe(dest("build/js"));
     
     done();
@@ -85,7 +89,7 @@ exports.javascript = javascript;
 exports.imagenOptimizer = imagenOptimizer;
 exports.conversorWebp = conversorWebp;
 exports.conversorAvif = conversorAvif;
-//exports.dev = parallel(imagenOptimizer, conversorWebp, javascript, dev);
-exports.dev = parallel(imagenOptimizer, conversorWebp, conversorAvif, javascript, dev);
+exports.dev = parallel(imagenOptimizer, conversorWebp, javascript, dev);
+//exports.dev = parallel(imagenOptimizer, conversorWebp, conversorAvif, javascript, dev);
 
 

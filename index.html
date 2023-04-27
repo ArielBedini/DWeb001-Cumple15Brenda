@@ -39,10 +39,10 @@
                 <div class="linea"></div>
             </div>
         </div>
-        <video autoplay muted loop> <!-- -->
-            <source src="vid/Particulas.mp4" type="video/mp4">
-            <source src="vid/Particulas.mov" type="video/mov">
-            <source src="vid/Particulas.webm" type="video/webm">
+        <video preload autoplay muted loop> <!-- -->
+            <source src="vid/particulas.mp4" type="video/mp4">
+            <source src="vid/particulas.mov" type="video/mov">
+            <source src="vid/particulas.webm" type="video/webm">
         </video>
     </div>
 
@@ -51,7 +51,7 @@
             <source srcset="build/img/icon-party.avif" type="image/avif">
             <source srcset="build/img/icon-party.webp" type="image/webp">
             <!-- Fallback para soporte en navegadores ue no soportan avif o webp-->
-            <img class="iconos" loading="lazy" width="200" height="300"  src="build/img/icon-party.png"
+            <img class="iconos" loading="lazy" height="300"  src="build/img/icon-party.png"
                 alt="Bola de cristal">
         </picture>
         <div class="linea"></div>
@@ -61,14 +61,14 @@
                 <h3 class="textoSombreado">Dia y Horario</h3>
                 <p>27 de mayo a las 21:00 hs</p>
                 <a title="Agendar" class="botonEnlace addeventatc" data-id="Al16762124"
-                    href="https://www.addevent.com/event/Al16762124" target="_blank">Add to Calendar</a>
+                    href="https://evt.to/aodsogaow" target="_blank">Add to Calendar</a>
             </div>
             <div class="lugarEnvento">
                 <h3 class="textoSombreado">Lugar</h3>
                 <p class="">Salon de Eventos <span class="textoResaltado">Mil 937</span></p>
                 <h3 class="textoSombreado">Dirección</h3>
-                <p class="">Belgrano 938, San Carlos Centro, Santa Fe</p>
-                <a class="botonEnlace" href="https://goo.gl/maps/dTL9GRrMhQFmENCi6" target="_Blanc">Cómo llegar
+                <p class="">Sarmiento y Salta, San Carlos Centro, Santa Fe</p>
+                <a class="botonEnlace" href="https://goo.gl/maps/E6w7boJmPUUBQd4J6" target="_Blanc">Cómo llegar
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z">
@@ -89,20 +89,12 @@
                 <picture>
                     <source srcset="build/img/costo.avif" type="image/avif">
                     <source srcset="build/img/costo.webp" type="image/webp">
-                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/costo.png" alt="costo">
+                    <img class="iconos" width="200" height="300" src="build/img/costo.png" alt="costo">
                 </picture>
                 <div class="linea"></div>
-                <!-- <a class="botonEnlace" href="#">Costo Tarjeta
-                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                        </path>
-                    </svg>
-                </a> -->
+
                 <div class="leyendaBloque">
-                    <p>Mayores: $ 7.500</p>
-                    <p>Manores de 10 años: $ 3.300</p>
+	            <p>><span class="neon-rojo">Teens:</span> $ 4.500</p>
                 </div>
             </div>
 
@@ -111,11 +103,11 @@
                 <picture>
                     <source srcset="build/img/27-may.avif" type="image/avif">
                     <source srcset="build/img/27-may.webp" type="image/webp">
-                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/27-may.png">
+                    <img class="iconos" width="200" height="300" src="build/img/27-may.png">
                 </picture>
                 <div class="linea"></div>
                 <div class="leyendaBloque">
-                    <p>Confirmanos tu asistencia antes del <span class="textoResaltado">19</span> de Mayo</p>
+                    <p>Confirmá tu asistencia antes del <span class="textoResaltado">19 - 05</span></p>
                 </div>
                 <a class="botonEnlace botonEnlace-rsvp" onclick="contenedorFormularioRSVP(true)">Confirmar Asistencia
                     <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
@@ -143,13 +135,12 @@
                             </div>
                             <div class="campo">
                                 <label for="email">E-mail:</label>
-                                <input type="email" placeholder="ngresá tu dirección de e-mail" name="email" id="email" required/>
+                                <input type="email" placeholder="ngresá tu dirección de e-mail" name="email" id="email">
                             </div>
                         </div>
-                        <div data-netlify-recaptcha="true"></div>
                         <div class="flex alinearDerecha">
-                            <input class="botonEnlace" type="submit" value="Enviar" name="btnEnviar" />
-                            <input class="botonEnlace" value="Cancelar" name="btnCancelar" onclick="contenedorFormularioRSVP(false)"/>
+                            <input class="botonEnlace" type="submit" value="Enviar" name="btnEnviar">
+                            <input class="botonEnlace" value="Cancelar" name="btnCancelar" onclick="contenedorFormularioRSVP(false)">
                         </div>
                     </fieldset>
                 </form>
@@ -163,7 +154,7 @@
                 <picture>
                     <source srcset="build/img/percha-retro.avif" type="image/avif">
                     <source srcset="build/img/percha-retro.webp" type="image/webp">
-                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/percha-retro.png"
+                    <img class="iconos" width="200" height="300" src="build/img/percha-retro.png"
                         alt="Dress">
                 </picture>
                 <div class="linea"></div>
@@ -177,7 +168,7 @@
                 <picture>
                     <source srcset="build/img/notepad.avif" type="image/avif">
                     <source srcset="build/img/notepad.webp" type="image/webp">
-                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/notepad.png" alt="Notas">
+                    <img class="iconos" width="200" height="300" src="build/img/notepad.png" alt="Notas">
                 </picture>
                 <div class="linea"></div>
                 <a class="botonEnlace" onclick="mostrarNota()">Notas
@@ -195,7 +186,7 @@
                 <picture>
                     <source srcset="build/img/musical-notes.avif" type="image/avif">
                     <source srcset="build/img/musical-notes.webp" type="image/webp">
-                    <img class="iconos" loading="lazy" width="200" height="300" src="build/img/musical-notes.png"
+                    <img class="iconos" width="200" height="300" src="build/img/musical-notes.png"
                         alt="Musica">
                 </picture>
                 <div class="linea"></div>
@@ -214,7 +205,7 @@
                             <Legend class="neon-violeta">Qué música te gustaría que suene la noche del <span class="textoResaltado">27-05</span> ?... </legend>
                             <div class="contenedorCampos">
                                 <div class="campo">
-                                    <label for="nombre">Nombre:</label>
+                                    <label for="nombre">Nombre Completo:</label>
                                     <input type="text" placeholder="Ingresa tu Nombre Completo" name="nombreCompleto" id="nombreCompleto" />
                                 </div>
                                 <div class="campo">
@@ -223,10 +214,9 @@
                                         id="temasmusicales" required></textarea>
                                 </div>
                             </div>
-                            <div data-netlify-recaptcha="true"></div>
                             <div class="contenedor-boton">
-                                <input class="botonEnlace" type="submit" value="Enviar" name="btnEnviar"/>
-                                <input class="botonEnlace" value="Cancelar" name="btnCancelar" onclick="contenedorFormularioMusica(false)"/>
+                                <input class="botonEnlace" type="submit" value="Enviar" name="btnEnviar">
+                                <input class="botonEnlace" value="Cancelar" name="btnCancelar" onclick="contenedorFormularioMusica(false)">
                             </div>
                         </fieldset>
                     </form>
@@ -247,11 +237,10 @@
 
 
     <footer class="pie">
-        <p><span>placefil.ar</span> - Todos los derenchos reservados</p>
+        <p><span>placefil.ar</span> © 2023. Todos los derechos reservados.</p>
     </footer>
     <script src="build/js/app.js"></script>
     <script src="build/js/modernizr.js"></script>
-    <script src="build/js/fullpage.js"></script>
 </body>
 
 </html>

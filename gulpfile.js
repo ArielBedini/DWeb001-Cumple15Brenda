@@ -8,14 +8,13 @@ const cssnano = require("cssnano");
 const postcss = require("gulp-postcss");
 const sourcemaps = require("gulp-sourcemaps");
 
-
 //dependencias para imágenes
 const cache = require("gulp-cache");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 //const avif = require("gulp-avif");
 
-//dependencias para JAvascript
+//dependencias para Javascript
 const terser = require("gulp-terser-js");
 
 // funcion para compilar sass a css
@@ -70,9 +69,10 @@ function conversorAvif(done) {
 // funcion para llevar todo nuestro codigo javacript a nuestro deployment en la carpeta 'build'
 function javascript(done) {
     src("src/js/**/*.js")
+        .pipe(sourcemaps.init())
         .pipe(terser())
-        .pipe(dest("build/js"));
-    
+        .pipe(sourcemaps.write("."))
+        .pipe(dest("build/js")); 
     done();
 }
 
